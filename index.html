@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/logo.png" alt="logo" class="logo">
+            <h1 class="titulo">Conversor de Monedas</h1>
+        </div>
+        <div class="cuerpo">
+            <p class="texto">Moneda y cantidad que desea para la conversion</p>
+            <div class="moneda">
+                <select id="moneda-uno" class="select">
+    
+                </select>
+                <input type="number" id="cantidad-uno" class="inputs" placeholder="0" value="1">
+            </div>
+            <div class="moneda">
+                <select id="moneda-dos" class="select">
+    
+                </select>
+                <input type="number" disabled id="cantidad-dos" class="inputs" placeholder="0" value="1">
+            </div>
+        </div>
+        <div class="final">
+            <div class="cambio">
+                <p class="texto2" id="texto2"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fondo: #27445D;
+    --fondo-cuerpo: #497D74;
+    --color-letras: #EFE9D5;
+    --color-gris: #F8F8F8;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Sour Gummy", serif;
+    font-weight: 5;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--fondo-cuerpo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    width: 90%;
+    height: auto;
+    min-height: 75vh;
+    border-radius: 20px;
+}
+
+/* HEADER */
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container .header .logo {
+    width: 80px;
+    height: 80px;
+}
+
+.container .header .titulo {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 40px;
+    color: var(--color-letras);
+}
+
+/* CUERPO */
+.container .cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container .texto { 
+    color: var(--color-letras);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.container .cuerpo .moneda {
+    display: flex;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: var(--color-gris);
+    border-right: 1px solid black;
+    font-size: 18px;
+    width: 100%;
+}
+
+.container .cuerpo .select {
+    padding: 10px;
+    border: 1px solid var(--color-letras);
+    font-size: 18px;
+}
+
+.container .cuerpo .inputs {
+    font-family: "Atkinson Hyperlegible Next", serif;
+    flex: 1;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: right;
+    outline: none;
+    width: 100%;
+}
+
+/* FINAL */
+.container .final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.container .final .cambio {
+    background-color: #71BBB2;
+    margin-inline: 20px;
+    text-align: end;
+    flex-grow: 1;
+    font-size: 20px;
+    border: black solid;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.container .final .texto2 {
+  font-family: "Atkinson Hyperlegible Next", serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .container .header .titulo {
+        font-size: 30px;
+    }
+
+    .container .cuerpo {
+        padding: 15px;
+    }
+
+    .container .cuerpo .moneda,
+    .container .cuerpo .select,
+    .container .cuerpo .inputs {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .container .final .cambio {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .container .header .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .container .header .titulo {
+        font-size: 25px;
+    }
+
+    .container .cuerpo .texto {
+        font-size: 18px;
+    }
+
+    .container .cuerpo .moneda,
+    .container .cuerpo .select,
+    .container .cuerpo .inputs {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .container .final .cambio {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
