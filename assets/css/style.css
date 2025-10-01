@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Kaushan+Script&display=swap");
+
+:root {
+  --fondo: #0d1b1e;
+  --fondo-cuerpo: #142b2e;
+  --color-letras: #f2f2f2;
+  --color-gris: #1f3b3d;
+  --color-dorado: #ffd700;
+  --color-acento: #4caf50; 
+  --color-acento-hover: #3a9c42;
+  --borde: rgba(255, 255, 255, 0.1);
+  --radio: 16px;
+  --sombra: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #0d1b1e, #123234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Alan Sans", sans-serif;
+  color: var(--color-letras);
+  padding: 10px;
+}
+
+/* CONTAINER */
+.container {
+  background: var(--fondo-cuerpo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 30px;
+  max-width: 800px;
+  width: 100%;
+  min-height: 55vh;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  gap: 25px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* HEADER */
+.titulo {
+  font-weight: 800;
+  font-size: 38px;
+  color: var(--color-dorado);
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* CUERPO */
+.texto {
+  font-size: 18px;
+  font-weight: 400;
+  color: #d6d6d6;
+  text-align: center;
+}
+
+/* MONEDA BOX */
+.moneda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: var(--radio);
+  background: var(--color-gris);
+  border: 1px solid var(--borde);
+  transition: all 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.moneda:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* SELECT */
+.select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--borde);
+  background: #0f2628;
+  color: var(--color-letras);
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select:hover {
+  background: #1b3c3e;
+  border-color: var(--color-acento);
+}
+
+/* INPUTS */
+.inputs {
+  flex: 1;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 12px;
+  text-align: right;
+  outline: none;
+  background: transparent;
+  color: var(--color-letras);
+  min-width: 0;
+  transition: color 0.2s ease;
+}
+
+.inputs:focus {
+  color: var(--color-acento);
+}
+
+/* FINAL */
+.cambio {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 600;
+  background: var(--color-acento);
+  text-align: center;
+  flex-grow: 1;
+  font-size: 26px;
+  border: none;
+  border-radius: var(--radio);
+  padding: 14px 24px;
+  color: #fff;
+  box-shadow: var(--sombra);
+  transition: background 0.3s ease, transform 0.25s ease;
+}
+
+.cambio:hover {
+  background: var(--color-acento-hover);
+  transform: scale(1.08);
+}
+
+/* 🔹 LINK API */
+.api {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dorado);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.api:hover {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--color-acento);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 20px;
+    gap: 18px;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+
+  .texto {
+    font-size: 16px;
+  }
+
+  .moneda {
+    flex-direction: row; 
+    gap: 12px;
+  }
+
+  .select,
+  .inputs {
+    flex: 1;
+    width: 100%;
+  }
+
+  .cambio {
+    font-size: 22px;
+    padding: 12px 18px;
+  }
+}
